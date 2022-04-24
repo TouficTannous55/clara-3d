@@ -1,23 +1,25 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@babylonjs/core': ^4.2.2
-  '@babylonjs/loaders': ^4.2.2
+  '@babylonjs/core': ^5.0.2
+  '@babylonjs/gui': ^5.0.2
+  '@babylonjs/loaders': ^5.0.0
   '@types/react': ^17.0.33
   '@types/react-dom': ^17.0.10
   '@vitejs/plugin-react': ^1.0.7
-  babylonjs: ^4.2.2
   react: ^17.0.2
   react-dom: ^17.0.2
   typescript: ^4.5.4
   vite: ^2.8.0
+  vite-plugin-full-reload: ^1.0.0
 
 dependencies:
-  '@babylonjs/core': 4.2.2
-  '@babylonjs/loaders': 4.2.2
-  babylonjs: 4.2.2
+  '@babylonjs/core': 5.0.2
+  '@babylonjs/gui': 5.0.2
+  '@babylonjs/loaders': 5.0.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  vite-plugin-full-reload: 1.0.0
 
 devDependencies:
   '@types/react': 17.0.40
@@ -296,17 +298,24 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@babylonjs/core/4.2.2:
-    resolution: {integrity: sha512-gAgetSyoxFZ/xzMVVnGPKaP941NHA59Ho8GGKFW98OTEp8yZcnzJjNOD2zfF1eKmlvR/6WwSmcrKWTJtPF1pyA==}
+  /@babylonjs/core/5.0.2:
+    resolution: {integrity: sha512-8eHXBWmNB+XF9hlcx+KMI0plwNBWzncNtXph+nyiGwDjUQ1CBLWlnatdQOt1a3WDRJ1s6YK8A6ObasxpF8UXlA==}
     dependencies:
       tslib: 2.3.1
     dev: false
 
-  /@babylonjs/loaders/4.2.2:
-    resolution: {integrity: sha512-Qk8r4xp4eOznbX3AsNYv8HgwS+tzGu6TwSpDX4il3g0B+k1N5k6KE5ghrnwDytoxUDVjGZ/VKk2cQqiHsg/NLg==}
+  /@babylonjs/gui/5.0.2:
+    resolution: {integrity: sha512-PSh3CKbWY2oW8JL7Zmgf7rz0+Fq/aIncH4bcBxsd5816zp5tYEsPxpWw5nuI5pIjrvNwU0qIXmhXZ9JP0860OA==}
     dependencies:
-      '@babylonjs/core': 4.2.2
-      babylonjs-gltf2interface: 4.2.2
+      '@babylonjs/core': 5.0.2
+      tslib: 2.3.1
+    dev: false
+
+  /@babylonjs/loaders/5.0.2:
+    resolution: {integrity: sha512-wVTCbywAapY3NUENZJV659nNRQJTUTQCffghAfWVQroY2tafsIf0qwZs6iLwGRier2u6L79PHRHp5YNKYJZwHw==}
+    dependencies:
+      '@babylonjs/core': 5.0.2
+      babylonjs-gltf2interface: 5.0.2
       tslib: 2.3.1
     dev: false
 
@@ -379,12 +388,8 @@ packages:
       color-convert: 1.9.3
     dev: true
 
-  /babylonjs-gltf2interface/4.2.2:
-    resolution: {integrity: sha512-LCQgW1lM+EpKK4yWMiPEgi6ONwJ7W4JrSu3t9JixNRgvnic72OnN2f0bt91rE30EJr1ZaokvkXD/aEiBp/Juyg==}
-    dev: false
-
-  /babylonjs/4.2.2:
-    resolution: {integrity: sha512-p7mTi6+nLuWJTLbwxEJxLOh/QMHMV2KA0bviEoQSK5VtsAq1F0JghoOZYRs4aEqAZF/deFPWvMQk1vbXJ+4eEA==}
+  /babylonjs-gltf2interface/5.0.2:
+    resolution: {integrity: sha512-JuBB4U0llRthQI6CF+plWEDGOxfdquOwv9HD0kp3uYXOfIEG5I7Hv++ObKdUhDhQc+kkuee92CJEHniCttAu1w==}
     dev: false
 
   /browserslist/4.20.0:
@@ -763,12 +768,10 @@ packages:
 
   /picocolors/1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
-    dev: true
 
   /picomatch/2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
-    dev: true
 
   /postcss/8.4.8:
     resolution: {integrity: sha512-2tXEqGxrjvAO6U+CJzDL2Fk2kPHTv1jQsYkSoMeOis2SsYaXRO2COxTdQp99cYvif9JTXaAk9lYGc3VhJt7JPQ==}
@@ -872,6 +875,13 @@ packages:
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
+
+  /vite-plugin-full-reload/1.0.0:
+    resolution: {integrity: sha512-GUhQ4wSm+H6yAlz7d2JwLu+BEcsFqZu1SUH0CNG+uyP4ALXGofUjHi+eGdLX19bYhMuOUWW3EwMt68jFkBsMew==}
+    dependencies:
+      picocolors: 1.0.0
+      picomatch: 2.3.1
+    dev: false
 
   /vite/2.8.6:
     resolution: {integrity: sha512-e4H0QpludOVKkmOsRyqQ7LTcMUDF3mcgyNU4lmi0B5JUbe0ZxeBBl8VoZ8Y6Rfn9eFKYtdXNPcYK97ZwH+K2ug==}
