@@ -2,12 +2,11 @@ import * as BABYLON from "@babylonjs/core";
 
 export const Atlas = {
   topTiles: new Map<string, BABYLON.Mesh>(),
-  //islands: new Map<string, BABYLON.Mesh>(),
   trees: new Map<string, BABYLON.Mesh>(),
   grass: new Map<string, BABYLON.Mesh>(),
   tallGrass: new Map<string, BABYLON.Mesh>(),
   stones: new Map<string, BABYLON.Mesh>(),
-  players: new Map<string, BABYLON.Mesh>(),
+  mushrooms: new Map<string, BABYLON.Mesh>(),
   leaves: new Map<string, BABYLON.Mesh>(),
   towers: new Map<string, BABYLON.Mesh>(),
   claras: new Map<string, BABYLON.Mesh>(),
@@ -20,7 +19,6 @@ let tiles: { [index: string]: string[] } = {
     "GrassTop2.glb",
     "WaterTop.glb",
   ],
-  //islands: ["Island.glb"],
   trees: [
     "Tree1.glb",
     "Tree2.glb",
@@ -56,12 +54,20 @@ let tiles: { [index: string]: string[] } = {
     "Stones1.glb",
     "Stones2.glb",
   ],
-  players: [],
+  mushrooms: [
+    "Mushrooms1.glb",
+    "Mushrooms2.glb",
+    "Mushrooms3.glb",
+    "Mushrooms4.glb",
+  ],
   leaves: [],
   towers: [
     "Tower1.glb",
     "Tower2.glb",
     "Tower3.glb",
+  ],
+  claras: [
+    "clara.glb",
   ],
 };
 
